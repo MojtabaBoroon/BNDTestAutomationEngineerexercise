@@ -172,6 +172,7 @@ namespace Internal.Services.Movements.IntegrationTests
             var responseModel = JsonConvert.DeserializeObject<PagedMovements>(responseContent);
             Assert.Equal(pagedMovements.PageSize, responseModel.PageSize);
             Assert.Equal(pagedMovements.PageNumber, responseModel.PageNumber);
+            Assert.Equal(pagedMovements.Movements.Count, responseModel.Movements.Count);
             Assert.Equal(accountNumber, responseModel.Movements.FirstOrDefault().Account);
             Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementType, responseModel.Movements.FirstOrDefault().MovementType);
             Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementId, responseModel.Movements.FirstOrDefault().MovementId);
@@ -208,6 +209,7 @@ namespace Internal.Services.Movements.IntegrationTests
             var responseModel = JsonConvert.DeserializeObject<PagedMovements>(responseContent);
             Assert.Equal(pagedMovements.PageSize, responseModel.PageSize);
             Assert.Equal(pagedMovements.PageNumber, responseModel.PageNumber);
+            Assert.Equal(pagedMovements.Movements.Count, responseModel.Movements.Count);
             Assert.Equal(accountNumber, responseModel.Movements.FirstOrDefault().Account);
             Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementType, responseModel.Movements.FirstOrDefault().MovementType);
             Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementId, responseModel.Movements.FirstOrDefault().MovementId);
@@ -243,6 +245,7 @@ namespace Internal.Services.Movements.IntegrationTests
             var responseModel = JsonConvert.DeserializeObject<PagedMovements>(responseContent);
             Assert.Equal(pagedMovements.PageSize, responseModel.PageSize);
             Assert.Equal(pagedMovements.PageNumber, responseModel.PageNumber);
+            Assert.Equal(pagedMovements.Movements.Count, responseModel.Movements.Count);
             Assert.Equal(accountNumber, responseModel.Movements.FirstOrDefault().Account);
             Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementType, responseModel.Movements.FirstOrDefault().MovementType);
             Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementId, responseModel.Movements.FirstOrDefault().MovementId);
