@@ -173,12 +173,15 @@ namespace Internal.Services.Movements.IntegrationTests
             Assert.Equal(pagedMovements.PageSize, responseModel.PageSize);
             Assert.Equal(pagedMovements.PageNumber, responseModel.PageNumber);
             Assert.Equal(pagedMovements.Movements.Count, responseModel.Movements.Count);
-            Assert.Equal(accountNumber, responseModel.Movements.FirstOrDefault().Account);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementType, responseModel.Movements.FirstOrDefault().MovementType);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementId, responseModel.Movements.FirstOrDefault().MovementId);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().AccountFrom, responseModel.Movements.FirstOrDefault().AccountFrom);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().AccountTo, responseModel.Movements.FirstOrDefault().AccountTo);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().Amount, responseModel.Movements.FirstOrDefault().Amount);
+            for (int i = 0; i < responseModel.Movements.Count; i++)
+            {
+                Assert.Equal(accountNumber, responseModel.Movements.ElementAt(i).Account);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).MovementType, responseModel.Movements.ElementAt(i).MovementType);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).MovementId, responseModel.Movements.ElementAt(i).MovementId);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).AccountFrom, responseModel.Movements.ElementAt(i).AccountFrom);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).AccountTo, responseModel.Movements.ElementAt(i).AccountTo);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).Amount, responseModel.Movements.ElementAt(i).Amount);
+            }
         }
 
         [Theory]
@@ -210,12 +213,15 @@ namespace Internal.Services.Movements.IntegrationTests
             Assert.Equal(pagedMovements.PageSize, responseModel.PageSize);
             Assert.Equal(pagedMovements.PageNumber, responseModel.PageNumber);
             Assert.Equal(pagedMovements.Movements.Count, responseModel.Movements.Count);
-            Assert.Equal(accountNumber, responseModel.Movements.FirstOrDefault().Account);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementType, responseModel.Movements.FirstOrDefault().MovementType);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementId, responseModel.Movements.FirstOrDefault().MovementId);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().AccountFrom, responseModel.Movements.FirstOrDefault().AccountFrom);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().AccountTo, responseModel.Movements.FirstOrDefault().AccountTo);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().Amount, responseModel.Movements.FirstOrDefault().Amount);
+            for (int i = 0; i < responseModel.Movements.Count; i++)
+            {
+                Assert.Equal(accountNumber, responseModel.Movements.ElementAt(i).Account);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).MovementType, responseModel.Movements.ElementAt(i).MovementType);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).MovementId, responseModel.Movements.ElementAt(i).MovementId);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).AccountFrom, responseModel.Movements.ElementAt(i).AccountFrom);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).AccountTo, responseModel.Movements.ElementAt(i).AccountTo);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).Amount, responseModel.Movements.ElementAt(i).Amount);
+            }
         }
 
         [Theory]
@@ -246,12 +252,15 @@ namespace Internal.Services.Movements.IntegrationTests
             Assert.Equal(pagedMovements.PageSize, responseModel.PageSize);
             Assert.Equal(pagedMovements.PageNumber, responseModel.PageNumber);
             Assert.Equal(pagedMovements.Movements.Count, responseModel.Movements.Count);
-            Assert.Equal(accountNumber, responseModel.Movements.FirstOrDefault().Account);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementType, responseModel.Movements.FirstOrDefault().MovementType);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().MovementId, responseModel.Movements.FirstOrDefault().MovementId);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().AccountFrom, responseModel.Movements.FirstOrDefault().AccountFrom);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().AccountTo, responseModel.Movements.FirstOrDefault().AccountTo);
-            Assert.Equal(pagedMovements.Movements.FirstOrDefault().Amount, responseModel.Movements.FirstOrDefault().Amount);
+            for (int i = 0; i < responseModel.Movements.Count; i++)
+            {
+                Assert.Equal(accountNumber, responseModel.Movements.ElementAt(i).Account);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).MovementType, responseModel.Movements.ElementAt(i).MovementType);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).MovementId, responseModel.Movements.ElementAt(i).MovementId);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).AccountFrom, responseModel.Movements.ElementAt(i).AccountFrom);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).AccountTo, responseModel.Movements.ElementAt(i).AccountTo);
+                Assert.Equal(pagedMovements.Movements.ElementAt(i).Amount, responseModel.Movements.ElementAt(i).Amount);
+            }
         }
     }
 }
