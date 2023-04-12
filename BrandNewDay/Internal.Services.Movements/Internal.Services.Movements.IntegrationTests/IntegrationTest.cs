@@ -185,8 +185,8 @@ namespace Internal.Services.Movements.IntegrationTests
         }
 
         [Theory]
-        [InlineData(1, AccountHelper.CustomerAccount, EnumMovementType.Incoming, 1, 5)]
-        public async Task GetMovements_IncomingMovementsWanted_IncomingPaymentsFetched(int productId, string accountNumber, EnumMovementType movementType, int pageNumber, int pageSize)
+        [InlineData(1, AccountHelper.CustomerAccount, EnumMovementType.FiscalTransfer, 1, 5)]
+        public async Task GetMovements_FiscalTransferMovementsWanted_FiscalTransferPaymentsFetched(int productId, string accountNumber, EnumMovementType movementType, int pageNumber, int pageSize)
         {
             // Arrang
             var fiscalTransferAccount = AccountHelper.FiscalTransferAccount;
@@ -225,8 +225,8 @@ namespace Internal.Services.Movements.IntegrationTests
         }
 
         [Theory]
-        [InlineData(1, AccountHelper.CustomerAccount, EnumMovementType.FiscalTransfer, 1, 5)]
-        public async Task GetMovements_FiscalTransferMovementsWanted_FiscalTransferPaymentsFetched(int productId, string accountNumber, EnumMovementType movementType, int pageNumber, int pageSize)
+        [InlineData(1, AccountHelper.CustomerAccount, EnumMovementType.Incoming, 1, 5)]
+        public async Task GetMovements_IncomingMovementsWanted_IncomingPaymentsFetched(int productId, string accountNumber, EnumMovementType movementType, int pageNumber, int pageSize)
         {
             // Arrang
             var pagedMovements = new PagedMovements
